@@ -1,0 +1,11 @@
+<app-banner title="Players"></app-banner>
+<div class="container site-section">
+  
+
+  
+    <div class="row">
+        <div class="col-lg-6 mt-3" *ngFor="let x of players">
+         <app-player [player]="x"></app-player>
+     </div>
+    </div>
+</div>

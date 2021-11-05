@@ -1,0 +1,27 @@
+<table _ngcontent-ejw-c7="" class="table custom-table">
+  <thead _ngcontent-ejw-c7="">
+      <tr _ngcontent-ejw-c7="">
+          <th _ngcontent-ejw-c7="">P</th>
+          <th _ngcontent-ejw-c7="">Team One</th>
+          <th _ngcontent-ejw-c7="">Team Two</th>
+          <th _ngcontent-ejw-c7="">score One</th>
+          <th _ngcontent-ejw-c7="">score two</th>
+      </tr>
+  </thead>
+  <tbody _ngcontent-ejw-c7="">
+
+      <tr _ngcontent-ejw-c7="" *ngFor='let m of matches'>
+          <td _ngcontent-ejw-c7="">{{ m.teamOne }}</td>
+          <td _ngcontent-ejw-c7=""><strong _ngcontent-ejw-c7="" class="text-white">{{  m.teamTwo }}</strong></td>
+          <td _ngcontent-ejw-c7="">{{ m.scoreOne }}</td>
+          <td _ngcontent-ejw-c7="">{{ m.scoreTwo }}</td>
+          <td _ngcontent-ejw-c7="">
+              <button class="btn btn-success" (click)="gotoDisplay(m.id)">Display</button>
+              <button class="btn btn-info">Edite</button>
+              <button class="btn btn-danger">Delate</button>
+          </td>
+        
+      </tr>
+      
+  </tbody>
+</table>

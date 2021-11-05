@@ -1,0 +1,35 @@
+<app-banner title="login"></app-banner>
+
+<div class="container mt-2">
+  <div class="row">
+    <div class="col-12">
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+
+        <div class="form-group">
+          <input formControlName="email" type="text" class="form-control" placeholder="email" required/>
+          <div *ngIf="!loginForm.get('email').valid && loginForm.get('email').touched">
+            <span *ngIf="loginForm.get('email').hasError('required')" class="error">
+              email is required!
+            </span>
+            <span *ngIf="loginForm.get('email').hasError('email')" class="error">
+              invalid email!
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input formControlName="password" type="password" class="form-control" placeholder="password" required/>
+          <div *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched">
+            <span *ngIf="loginForm.get('password').hasError('required')" class="error">
+              password is required!
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary py-3 px-5">login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+.Loss{
+    font-size: 20px;
+    color: red;
+
+
+}
+.Win{
+    font-size: 50px;
+    color: green;
+
+}
+.Drow{
+    font-size: 30px;
+    color: blue;
+
+}

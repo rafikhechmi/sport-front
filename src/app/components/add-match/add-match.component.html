@@ -1,0 +1,43 @@
+<app-banner title={{title}}matche></app-banner>
+
+<div class="container mt-2">
+  <div class="row">
+    <div class="col-lg-12">
+      <form #addMatchForm="ngForm" (ngSubmit)="addEditMatch()">
+        <div class="form-group">
+          <input type="text" [ngModelOptions]="{ standalone: true }" [(ngModel)]="match.teamOne" class="form-control"
+            placeholder="teamOne" #teamOne="ngModel" required />
+            <span *ngIf="teamOne.invalid && teamOne.touched" class="error">team one is required</span>
+        </div>
+        <div class="form-group">
+          <input type="text" [ngModelOptions]="{ standalone: true }" [(ngModel)]="match.scoreOne" class="form-control"
+            placeholder="scoreOne" required #scoreOne="ngModel"/>
+            <span *ngIf="scoreOne.invalid && scoreOne.touched" class="error">scoreOne is required</span>
+
+        </div>
+        <div class="form-group">
+          <input type="text" [ngModelOptions]="{ standalone: true }" [(ngModel)]="match.teamTwo" class="form-control"
+            placeholder="teamTwo" required #teamTwo="ngModel"/>
+            <span *ngIf="teamTwo.invalid && teamTwo.touched" class="error">teamTwo is required</span>
+
+        </div>
+
+        <div class="form-group">
+          <input type="text" [ngModelOptions]="{ standalone: true }" [(ngModel)]="match.scoreTwo" class="form-control"
+            placeholder="scoreTwo" required  #scoreTwo="ngModel"/>
+            <span *ngIf="scoreTwo.invalid && scoreTwo.touched" class="error">scoreTwo is required</span>
+
+        </div>
+
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary py-3 px-5">{{ title }}</button>
+          <span></span>
+        </div>
+      </form>
+    
+     
+    </div>
+    
+    </div>
+  </div>
